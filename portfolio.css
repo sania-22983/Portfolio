@@ -1,0 +1,500 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.navbar {
+    background-color: #203549;
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+}
+
+.hero {
+    background: linear-gradient(rgba(13, 27, 42, 0.7), rgba(13, 27, 42, 0.7)), url('https://source.unsplash.com/1600x900/?technology,code') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 150px 0;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.btn-custom {
+    background-color: #1b263b;
+    color: white;
+    border-radius: 50px;
+}
+
+.btn-custom:hover {
+    background-color: #415a77;
+}
+.hero-img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-img:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+.about-img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-img:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+}
+/* Overall Skill Card Style */
+.skill-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Skill Icon Hover Effect */
+.skill-card i {
+    color: #1b263b;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.skill-card i:hover {
+    color: #415a77;
+    transform: scale(1.2);
+}
+
+/* Progress Bar Style */
+.progress {
+    height: 10px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    margin-top: 15px;
+}
+
+.progress-bar {
+    background-color: #1b263b;
+    border-radius: 10px;
+    transition: width 1s ease;
+}
+
+/* Hover Effect for Skills */
+.skill-card:hover .progress-bar {
+    background-color: #415a77;
+}
+
+/* Text & Title Style */
+h2, .lead {
+    color: #1b263b;
+}
+/* Overall Service Section */
+#services {
+    background-color: #f0f8ff; /* Light blue background for professionalism */
+    color: #1b263b; /* Dark text for contrast */
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* Title Style */
+#services h2 {
+    font-size: 36px;
+    color: #1b263b;
+    font-weight: bold;
+}
+
+/* Service Cards Style */
+.service-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 30px;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-10px); /* Hover lift effect */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Service Icon Hover Effect */
+.service-card i {
+    color: #1b263b;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.service-card i:hover {
+    color: #415a77; /* Change icon color on hover */
+    transform: scale(1.2); /* Slight icon scale on hover */
+}
+
+/* Text and Paragraph Style */
+.service-card h5 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1b263b;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #415a77; /* Soft grey text color for readability */
+    margin-top: 10px;
+}
+
+/* AOS Animation Styles */
+[data-aos="fade-up"] {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .service-card {
+        padding: 20px;
+    }
+
+    .service-card i {
+        font-size: 2.5rem;
+    }
+
+    #services h2 {
+        font-size: 28px;
+    }
+}
+.project-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-overlay h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.project-overlay p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.project-overlay .btn {
+    background-color: #007bff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+.project-overlay .btn:hover {
+    background-color: #0056b3;
+}
+.btn-custom {
+    background-color: #ff6600;
+    color: white;
+    font-weight: 600;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .btn-custom:hover {
+    background-color: #e65c00;
+    transform: scale(1.03);
+  }
+
+  .text-orange {
+    color: #ff6600;
+  }
+
+  .card {
+    border-radius: 12px;
+  }
+  
+  .experience-timeline-section {
+    background: linear-gradient(rgba(13, 27, 42, 0.7), rgba(13, 27, 42, 0.7));
+    padding: 80px 20px;
+    color: #fff;
+  }
+  
+  .section-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+  }
+  
+  .timeline {
+    position: relative;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 3px solid rgb(27, 44, 54);
+  }
+  
+  .timeline-item {
+    margin-bottom: 50px;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .timeline-item:hover {
+    transform: scale(1.02);
+  }
+  
+  .timeline-dot {
+    width: 16px;
+    height: 16px;
+    background:linear-gradient(rgba(13, 27, 42, 0.7), rgba(13, 27, 42, 0.7));
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    animation: pulse 2s infinite;
+  }
+  
+  .timeline-content {
+    padding: 15px 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .timeline-item:hover .timeline-content {
+    box-shadow: 0 10px 25px rgba(201, 175, 27, 0.534);
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #fff;
+  }
+  
+  .timeline-content .time {
+    font-size: 0.9rem;
+    color: #ccc;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .timeline-content p {
+    color: #ddd;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  /* CSS Animation */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(30, 44, 59, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 12px rgba(0, 123, 255, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+  }
+/* Navbar entrance animation */
+.animated-navbar {
+    animation: slideDownFade 1s ease-out;
+  }
+
+  @keyframes slideDownFade {
+    0% {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Nav Link Hover Animation */
+  .navbar-brand{
+    padding-left: 20px;
+  }
+  .navbar-nav .nav-link {
+    position: relative;
+    padding: 10px 15px;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+
+  .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffc107;
+    bottom: 5px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+
+  .navbar-nav .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #ffc107;
+  }
+ 
+  .skill-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .progress-bar {
+    background-color: #28a745;
+  }
+
+  .progress-bar[aria-valuenow="90"] {
+    background-color: #007bff;
+  }
+
+  .progress-bar[aria-valuenow="85"] {
+    background-color: #ffc107;
+  }
+
+  .progress-bar[aria-valuenow="75"] {
+    background-color: #17a2b8;
+  }
+
+  .progress-bar[aria-valuenow="80"] {
+    background-color: #f44336;
+  }
+
+  /* AOS Animations */
+  [data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  [data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .social-icons .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: all 0.3s ease;
+  }
+
+  .social-icons .fb { background-color: #21242b; }
+  .social-icons .ig { background-color: #21242b; }
+  .social-icons .gh { background-color: #21242b }
+  .social-icons .li { background-color: #21242b; }
+
+  .social-icons .icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  .tool-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 30px rgba(246, 190, 5, 0.626);
+}
+
+.progress {
+    height: 8px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    background-color: orange;
+    border-radius: 5px;
+}
+.card{
+    
+    background-color: white;
+}.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 6px 30px rgba(18, 22, 33, 0.626);
+}
+
+  
+  
